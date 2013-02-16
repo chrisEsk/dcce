@@ -1,14 +1,13 @@
 dcce
 ====
 
-Autores: 
-Christian Esquivel @ChrisEskivel (admin)
+Authors: 
+- Chris Esquivel @ChrisEskivel (admin)
+- Daniel Castro
 
-Daniel Castro
+Adventure time 8bit platformer game.
 
-Proyecto final de la clase de programación 3 con patrones.
-
-Tecnologías usadas:
+Technologies used:
 - Adobe Flex SDK
 - Flash Develop
 - Flixel
