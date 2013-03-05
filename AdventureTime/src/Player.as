@@ -27,8 +27,8 @@ package
 			
 			//	The Animation sequences we need
 			addAnimation("idle", [0], 0, false);
-			addAnimation("walk", [0, 1, 0, 2], 10, true);
-			addAnimation("jump", [1], 0, false);
+			addAnimation("walk", [0, 1], 10, true);
+			addAnimation("jump", [2], 0, false);
 			addAnimation("hurt", [4], 0, false);
 			
 			//	Enable the Controls plugin - you only need do this once (unless you destroy the plugin)
