@@ -6,6 +6,8 @@ package
 	public class Player extends FlxSprite
 	{
 		[Embed(source = '../assets/finn16x25.png')] private var playerPNG:Class;
+		[Embed(source = '../assets/jump.mp3')] private var jump:Class;
+		
 		
 		public function Player(X:Number, Y:Number)
 		{
@@ -79,6 +81,7 @@ package
 			else if (velocity.y < 0)
 			{
 				play("jump");
+				//FlxG.play(jump);
 			}
 		}
 		
