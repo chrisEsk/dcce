@@ -6,9 +6,9 @@ package
 	{
 		[Embed(source = '../assets/musicGame.mp3')] private var music:Class;
 		
+		private var level:Level1;
 		private var player:Player;
 		private var enemy:Enemy;
-		private var floor:FlxTileblock;
 
 		private var enemyGroup:FlxGroup;
 		private var elevator1:Elevator;
@@ -22,24 +22,27 @@ package
 		
 		override public function create():void
 		{
-			FlxG.play(music);
+			level = new Level1;
 			
-			FlxG.bgColor = 0xff144954;
+			FlxG.play(music);
 		
 			player = new Player(32, 100);
 			
-			floor = new FlxTileblock(0, 208, 320, 32);
-			floor.makeGraphic(320, 32, 0xff689c16);
+			//	Tell flixel how big our game world is
+			FlxG.worldBounds = new FlxRect(0, 0, level.width, level.height);
 			
-		
+			//	Don't let the camera wander off the edges of the map
+			FlxG.camera.setBounds(0, 0, level.width, level.height);
+			
+			//	The camera will follow the player
+			FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
+			
 			elevator1 = new Elevator(8, 8, 10, 0,50);
 			elevator2 = new Elevator(5, 5, 10, 0,45);
 			elevator3 = new Elevator(2, 11, 10, 0,35);
 				
-				
+			add(level);	
 			add(enemy);
-			add(floor);
-
 			add(player);
 			
 			add(elevator1);
@@ -47,9 +50,8 @@ package
 			add(elevator3);
 	
 			createEnemys();
-            
 
-			//	These are debugger watches. Bring up the debug console (the ' key by default) and you'll see their values in real-time as you play
+			// Debug
 			FlxG.watch(player.acceleration, "x", "ax");
 			FlxG.watch(player.velocity, "x", "vx");
 			FlxG.watch(player.velocity, "y", "vy");
@@ -60,7 +62,7 @@ package
 		{
 			super.update();
 			
-			FlxG.collide(player, floor);
+			FlxG.collide(player, level);
 			FlxG.collide(player, elevator3);
 			FlxG.collide(player, elevator2);
 			FlxG.collide(player, elevator1);
@@ -84,8 +86,6 @@ package
 			p.kill();
 			p.x = Math.random() * FlxG.width - 700;
 			p.y =  Math.random() - 700;
-			
-			
 			
 		}
 	}
