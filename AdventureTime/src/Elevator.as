@@ -29,27 +29,22 @@ import org.flixel.*;
 				moveY = true;
 				velocity.y = Speed;
 			}
-			
-			immovable = true;	//We want the elevator to be "solid" and not shift during collisions
+			immovable = true;
 			moves = true;
 			allowCollisions = FlxObject.UP;
 		}
 		
 		override public function update():void
 		{
-			//	Has platform reached the end of its movement?
-			
 			if (moveX)
 			{
 				if (x > endPoint.x)
 				{
-					//	Yes, so reverse the velocity to send it back up again
 					x = endPoint.x;
 					velocity.x = -velocity.x;
 				}
 				else if (x < startPoint.x)
 				{
-					//	If platform has returned to the top (start position) then reverse it
 					x = startPoint.x;
 					velocity.x = -velocity.x;
 				}
@@ -59,20 +54,18 @@ import org.flixel.*;
 			{
 				if (y > endPoint.y)
 				{
-					//	Yes, so reverse the velocity to send it back up again
 					y = endPoint.y;
 					velocity.y = -velocity.y;
 				}
 				else if (y < startPoint.y)
 				{
-					//	If platform has returned to the top (start position) then reverse it
 					y = startPoint.y;
 					velocity.y = -velocity.y;
 				}
 				
 			}
-			
 		}
+		
 	}
 
 }

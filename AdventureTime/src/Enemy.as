@@ -1,34 +1,31 @@
 package  
 {
 	import org.flixel.*;
-	/**
-	 * ...
-	 * @author ...
-	 */
+	
 	public class Enemy extends FlxSprite
 	{
 		[Embed(source = '../assets/sword.png')] private var enemy:Class;
 		
+		private var level:Level1 = new Level1;
+		
 		public function Enemy(x:Number, y:Number) 
 		{
 			super(x, y);
-			this.loadGraphic(enemy, true, true, 11, 42, true);
+			this.loadGraphic(enemy, false, false, 9, 39, true);
 			addAnimation("idle", [0], 0, false);
 			this.play("idle");	
-			velocity.y = 150;
+			velocity.y = 140;
 			
 		}
 		
 		override public function update():void
 		{
-			if (y > FlxG.height)
+			if (y > level.height)
 			{
-				x = Math.random() * FlxG.height - width;
-				y = Math.random() * - 700 - height;
+				x = Math.random() * Math.random() * level.width ;
+				y = Math.random() * Math.random() * level.height - 500 ;
 			}
 		}
 		
-		
 	}
-
 }
