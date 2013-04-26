@@ -9,7 +9,7 @@ package
 	 * Abril 2013, Universidad Cenfotec
 	 */
 
-	import org.flixel.FlxGame;
+	import org.flixel.*;
 	
 	[SWF(width="640", height="480", backgroundColor="#000000")]
 

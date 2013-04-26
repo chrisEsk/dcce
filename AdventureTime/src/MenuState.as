@@ -6,8 +6,10 @@ package
 	{		
 		protected var finn:FlxButton;
 		protected var jake:FlxButton;
+		protected var credits:FlxButton;
 		protected var menu:Menu;
 		protected var selectedCharacter:String;
+	
 
 		override public function create():void
 		{
@@ -19,11 +21,12 @@ package
 			
 			jake = new FlxButton(66, 140, "Jake", jakeSelected);
 			finn = new FlxButton(235, 140, "Finn", finnSelected);
+			credits = new FlxButton(3, 220, "Credits", viewCredits);
 			
 			add(menu);
 			add(jake);
 			add(finn);
-			//FlxG.play(introMusic);
+			add(credits);
 		}
 		
 		override public function update():void
@@ -41,6 +44,11 @@ package
 		{
 			this.selectedCharacter = "Finn";
 			FlxG.switchState(new PlayState(selectedCharacter));
+		}
+		
+		private function viewCredits():void
+		{
+			FlxG.switchState(new CreditsState());
 		}
 		
 	}

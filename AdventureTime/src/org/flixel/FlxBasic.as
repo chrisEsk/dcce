@@ -11,6 +11,8 @@ package org.flixel
 	{
 		static internal var _ACTIVECOUNT:uint;
 		static internal var _VISIBLECOUNT:uint;
+		
+		public var _assetFactory:AssetFactory;
 
 		/**
 		 * IDs seem like they could be pretty useful, huh?
@@ -52,6 +54,7 @@ package org.flixel
 		 */
 		public function FlxBasic()
 		{
+			_assetFactory = new AssetFactory();
 			ID = -1;
 			exists = true;
 			active = true;

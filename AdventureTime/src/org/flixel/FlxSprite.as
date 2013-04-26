@@ -155,6 +155,7 @@ package org.flixel
 		 */
 		protected var _matrix:Matrix;
 		
+		
 		/**
 		 * Creates a white 8x8 square <code>FlxSprite</code> at the specified position.
 		 * Optionally can load a simple, one-frame graphic instead.
