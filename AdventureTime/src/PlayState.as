@@ -86,7 +86,8 @@ package
 			try
 			{
 				enemyGroup = new FlxGroup();
-			for (var i:Number = 0; i < 90; i++ )
+			for (var i:Number = 0; i < 55; i++)
+			// Change evaluation to lower difficulty. Final version is 55.
 			{
 			    enemy = new FallingSword (Math.random() * level.width - 500 , Math.random()* level.height - 500 );
 				enemyGroup.add(enemy);

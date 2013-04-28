@@ -1,6 +1,0 @@
-Resources:
-
-- http://www.photonstorm.com/archives/2247/flash-game-dev-tip-12-building-a-retro-platform-game-in-flixel-part-1
-(Download tutorial files)
-
-- http://flixel.org/help.html

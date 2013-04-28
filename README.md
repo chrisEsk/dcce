@@ -14,3 +14,6 @@ Technologies used:
 - DAME
 - Photonstorm plug-in
 - Actionscript 3
+- Photoshop
+
+For more info see Info.pdf
