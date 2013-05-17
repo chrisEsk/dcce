@@ -18,7 +18,7 @@ package
 			
 			actualInfo = "Developers: \n- Chris Esquivel (@ChrisEsk) \n- Daniel Castro";
 			actualInfo += "\n\nFind the code of this game here: \ngithub.com/chrisEsk/dcce";
-			actualInfo += "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUniversidad Cenfotec";
+			actualInfo += "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\Cenfotec University";
 			
 			info = new FlxText(0, 0, 320);
 			

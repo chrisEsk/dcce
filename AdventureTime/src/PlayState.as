@@ -86,8 +86,8 @@ package
 			try
 			{
 				enemyGroup = new FlxGroup();
-			for (var i:Number = 0; i < 55; i++)
-			// Change evaluation to lower difficulty. Final version is 55.
+			for (var i:Number = 0; i < 40; i++)
+			// Change evaluation to lower difficulty. 1.0 version is 55.
 			{
 			    enemy = new FallingSword (Math.random() * level.width - 500 , Math.random()* level.height - 500 );
 				enemyGroup.add(enemy);
@@ -131,7 +131,7 @@ package
 			player.reset(32, 100);	
 			enemyGroup.kill();
 			createEnemys();
-			if (maxLife <= 1) {
+			if (maxLife <= 0) {
 				FlxG.switchState(new GameOverState(0));
 				
 				} else {
