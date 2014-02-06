@@ -4,7 +4,7 @@ dcce
 This game can be played at http://www.newgrounds.com/portal/view/617935
 
 Authors: 
-- Chris Esquivel @ChrisEskivel (admin)
+- Chris Esquivel @ChrisEsk (admin)
 - Daniel Castro
 
 Adventure time 8bit platformer game.
